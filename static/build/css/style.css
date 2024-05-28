@@ -1809,11 +1809,35 @@ footer .social svg:hover{
     width: 300px;
   }
 }
+.visible{
+  visibility: visible;
+}
+.collapse{
+  visibility: collapse;
+}
+.static{
+  position: static;
+}
+.fixed{
+  position: fixed;
+}
 .absolute{
   position: absolute;
 }
 .relative{
   position: relative;
+}
+.inset-0{
+  inset: 0px;
+}
+.right-2{
+  right: 0.5rem;
+}
+.top-2{
+  top: 0.5rem;
+}
+.z-50{
+  z-index: 50;
 }
 .m-0{
   margin: 0px;
@@ -1831,9 +1855,6 @@ footer .social svg:hover{
 }
 .mb-11{
   margin-bottom: 2.75rem;
-}
-.mb-12{
-  margin-bottom: 3rem;
 }
 .mb-2{
   margin-bottom: 0.5rem;
@@ -1859,11 +1880,17 @@ footer .social svg:hover{
 .block{
   display: block;
 }
+.inline{
+  display: inline;
+}
 .flex{
   display: flex;
 }
 .inline-flex{
   display: inline-flex;
+}
+.table{
+  display: table;
 }
 .grid{
   display: grid;
@@ -1943,9 +1970,21 @@ footer .social svg:hover{
 .overflow-hidden{
   overflow: hidden;
 }
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rounded{
+  border-radius: 0.25rem;
+}
 .bg-digiup-gray-50{
   --tw-bg-opacity: 1;
   background-color: rgb(242 250 255 / var(--tw-bg-opacity));
+}
+.bg-gray-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 .bg-slate-400{
   --tw-bg-opacity: 1;
@@ -1955,19 +1994,8 @@ footer .social svg:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-gradient-to-br{
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-}
-.from-\[\#9285F9\]{
-  --tw-gradient-from: #9285F9 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(146 133 249 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.to-\[\#3B4AFF\]{
-  --tw-gradient-to: #3B4AFF var(--tw-gradient-to-position);
-}
-.fill-black{
-  fill: #000;
+.bg-opacity-50{
+  --tw-bg-opacity: 0.5;
 }
 .fill-digiup-blue-200{
   fill: #0084D4;
@@ -1983,6 +2011,9 @@ footer .social svg:hover{
 }
 .p-4{
   padding: 1rem;
+}
+.p-8{
+  padding: 2rem;
 }
 .px-6{
   padding-left: 1.5rem;
@@ -2002,9 +2033,6 @@ footer .social svg:hover{
 }
 .pb-4{
   padding-bottom: 1rem;
-}
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 .pb-7{
   padding-bottom: 1.75rem;
@@ -2032,9 +2060,9 @@ footer .social svg:hover{
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .text-sm{
   font-size: 0.875rem;
@@ -2051,6 +2079,12 @@ footer .social svg:hover{
 }
 .font-semibold{
   font-weight: 600;
+}
+.lowercase{
+  text-transform: lowercase;
+}
+.italic{
+  font-style: italic;
 }
 .text-digiup-blue-100{
   --tw-text-opacity: 1;
@@ -2072,6 +2106,10 @@ footer .social svg:hover{
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
+.text-gray-600{
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
 .text-gray-700{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -2079,65 +2117,14 @@ footer .social svg:hover{
 .underline{
   text-decoration-line: underline;
 }
-/* Modal */
-.input-lightbox {
-    display: none;
-  }
-.input-lightbox:not(:checked) ~ .lightbox {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-.lightbox {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 900;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-80px);
-    transition: all 0.4s ease-in-out;
-  }
-.lightbox .content {
-    position: relative;
-    height: auto;
-    max-height: 90vh;
-    width: 85vw;
-    margin-bottom: 0;
-    padding: 2rem;
-    max-width: 1000px;
-    overflow: auto;
-  }
-@media (max-width: 991px) {
-    .lightbox .content {
-      max-height: 80vh;
-    }
-  }
-.lightbox .lightclose {
-    position: absolute;
-    cursor: pointer;
-    display: block;
-    height: 22px;
-    width: 22px;
-    right: 10px;
-    top: 10px;
-  }
-.lightbox .lightclose::before {
-    display: block;
-    content: "";
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: calc(100vh + 80px);
-  }
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 /* Coisas a fazer */
 /* Modal para quando clicar no story abrir um formulario ?? */
 /* Form enviar um email para o admin e para quem enviou */
@@ -2226,9 +2213,6 @@ footer .social svg:hover{
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-  .md\:pb-0{
-    padding-bottom: 0px;
   }
   .md\:pb-14{
     padding-bottom: 3.5rem;

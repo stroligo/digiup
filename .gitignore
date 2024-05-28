@@ -1,10 +1,14 @@
-.vscode/
-.DS_Store
-package-lock.json
-node_modules/
 
-wordpress/*
-!wordpress/wp-content
-wordpress/wp-content/*
-!wordpress/wp-content/themes*
-wordpress/wp-content/themes/the-theme-REF
+# Ignorar configurações específicas e arquivos de sistema
+/.vscode/
+/.DS_Store
+/package-lock.json
+/node_modules/
+
+# Ignorar tudo dentro de wordpress, exceto o tema digiup
+/wordpress/*
+!/wordpress/wp-content
+/wordpress/wp-content/*
+!/wordpress/wp-content/themes
+/wordpress/wp-content/themes/*
+!/wordpress/wp-content/themes/digiup/
